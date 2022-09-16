@@ -65,6 +65,16 @@ void main()
     }
 
     std::cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
-    std::cout << "Gewonnen: " << board_drawer::player_to_char(wc.check()) << "\n";
+    
+    if(winCheckResult > 0)
+    {
+        std::cout << "Gewonnen: " << board_drawer::player_to_char(winCheckResult) << "\n";
+    }
+    else if(winCheckResult == -1)
+    {
+        std::cout << "Unentschieden\n";
+    }
+    
+    
     bd.draw();
 }
